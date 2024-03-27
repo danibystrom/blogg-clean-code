@@ -18,12 +18,14 @@ export default function BlogFeed() {
       <Box
         sx={{
           display: "grid",
-          gap: 2,
-          gridTemplateColumns: "repeat(auto-fill, minmax(200px, 1fr))",
+          gridTemplateColumns: "repeat(auto-fill, minmax(300px, 1fr))",
+          gap: 5,
+          padding: 10,
+          justifyContent: "center",
         }}
       >
         {blogposts.map((post) => (
-          <Card key={post.id} sx={{ maxWidth: 345 }}>
+          <Card key={post.id} sx={{ width: "100%" }}>
             <CardMedia
               sx={{ height: 140 }}
               image={post.image}
@@ -38,7 +40,9 @@ export default function BlogFeed() {
               </Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Läs mer</Button>
+              <Button size="small" sx={{ color: "black" }}>
+                Läs mer
+              </Button>
             </CardActions>
           </Card>
         ))}
