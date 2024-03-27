@@ -1,5 +1,5 @@
 import BlogFeed from "./components/BlogFeed";
-import Footer from "./components/Footer";
+import Footer from "./components/BottomSection";
 import Header from "./components/Header";
 
 export default function Home() {

@@ -1,19 +1,21 @@
 import Toolbar from "@mui/material/Toolbar";
 
-export default function Footer() {
+{
+  /* Följ konventioner - använd enhetligt namngivningskonvention för att enklare förstå koden  */
+  /* Struktur ej enhetlig med "header"-benämningen och jag hade därför kunna benämnt denna som "Footer"  */
+}
+export default function BottomSection() {
   return (
     <Toolbar
       style={{
         justifyContent: "space-between",
         height: "10vh",
-        position: "fixed",
         bottom: "0",
         width: "100%",
         backgroundColor: "#1976D2",
         color: "#fff",
         display: "flex",
         alignItems: "center",
-        padding: "0 20px",
         boxSizing: "border-box",
       }}
     >
@@ -28,6 +30,8 @@ export default function Footer() {
           padding: 0,
         }}
       >
+        {/* Undivk så mycket inline styling - hade kunnat brutits ut mot separat css-fil */}
+
         <li style={{ cursor: "pointer" }}>Home</li>
         <li style={{ cursor: "pointer" }}>Privacy</li>
         <li style={{ cursor: "pointer" }}>Help Center</li>

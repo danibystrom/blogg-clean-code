@@ -5,6 +5,7 @@ import {
   CardActions,
   CardContent,
   CardMedia,
+  Pagination,
   Typography,
 } from "@mui/material";
 import blogposts from "../data/blogposts.json";
@@ -14,16 +15,25 @@ export default function BlogFeed() {
   function generateRandomDate() {
     const start = new Date(2020, 0, 1); // Startdatum: 1 januari 2020
     const end = new Date(); // Slutdatum: Idag
-    const randomDate = new Date(
+
+    {
+      /* Använd meningsfulla namn - skall tydligt beskriva variabelns syfte  */
+      /* randomizedddmmyy skulle kunna ändras till "randomDate" exempelvis */
+    }
+    const randomizeddmmyy = new Date(
       start.getTime() + Math.random() * (end.getTime() - start.getTime())
+      // Skapar ett nytt datum som är ett slumpmässigt tidsspann mellan `start` och `end`
     );
-    return randomDate.toDateString(); // Returnera datumet som en sträng
+    // Konverterar det slumpmässiga datumet till en sträng i formatet "Dag Mån DD ÅÅÅÅ"
+    return randomizeddmmyy.toDateString();
   }
+
+  {/* Undvik överflödiga kommentarer - fokusera på det som är viktigt */}
 
   return (
     <Box sx={{ backgroundColor: "#fff", p: 2 }}>
-      <Box sx={{ textAlign: "center", mx: "auto", pt: "2rem" }}>
-        <Typography variant="h3" sx={{ color: "black" }}>
+      <Box sx={{ textAlign: "center", mx: "auto", pt: "1rem" }}>
+        <Typography variant="h3" sx={{ color: "black", paddingTop: "2rem" }}>
           Latest updates
         </Typography>
       </Box>
@@ -36,6 +46,7 @@ export default function BlogFeed() {
           justifyContent: "center",
         }}
       >
+        {/* Undik långa funktioner - hade kunnat brutits ut mot egen komponent */}
         {blogposts.map((post) => (
           <Card key={post.id} sx={{ width: "100%" }}>
             <CardMedia
@@ -65,6 +76,10 @@ export default function BlogFeed() {
             </CardActions>
           </Card>
         ))}
+      </Box>
+
+      <Box sx={{ display: "flex", justifyContent: "center", mt: 4 }}>
+        <Pagination count={10} />
       </Box>
     </Box>
   );
