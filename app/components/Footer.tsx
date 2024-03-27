@@ -5,19 +5,19 @@ export default function Footer() {
     <Toolbar
       style={{
         justifyContent: "space-between",
-        height: "15vh",
+        height: "10vh",
         position: "fixed",
         bottom: "0",
         width: "100%",
-        backgroundColor: "#fff",
-        color: "#000",
+        backgroundColor: "#1976D2",
+        color: "#fff",
         display: "flex",
         alignItems: "center",
         padding: "0 20px",
         boxSizing: "border-box",
       }}
     >
-      <p>© Blog. Inc</p>
+      <p>© Travel Blog. Inc</p>
 
       <ul
         style={{
